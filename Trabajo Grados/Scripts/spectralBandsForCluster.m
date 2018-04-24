@@ -11,7 +11,7 @@ for f = 1:20 % columnas de la matriz cluster
          n = n + 1; 
          clusterMatrix(n,f) =  c; %matriz con las bandas espectrales de cada cluster,
 %                         los valores de cada posición son las bandas
-%                         espectrales y las columna es el cluster al que
+%                         espectrales y la columna es el cluster al que
 %                         pertenece
       end
    end
