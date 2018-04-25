@@ -1,16 +1,16 @@
-%clear
+clear
 
 %Paso 1
 
-%I = read_HSI('Indian.bil');
+I = load('IndianSubset.mat');
 
-%I = shiftdim(I,2);
+I = shiftdim(I,2);
 
-%H = I(:,:)';
+H = I(:,:)';
 
-%S = H';
+S = H';
 
-%R = corr(S);
+R = corr(S);
 
 %Paso 2
 
