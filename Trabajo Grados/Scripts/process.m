@@ -99,6 +99,24 @@ for IndiceE = 1 : d
     
 end
 
-% for l = 400 : -1 : 1
-%     disp(X);
-% end
+%sumatoria
+sumatoria = zeros(20,1);
+
+for sumatoriaL= 1:20
+    for sumatoriaInterna= 1:5
+        %Evaluar si cada columna de la celda tiene un unico valor o una matriz de
+        %valores
+        if (size(Landa{(sumatoriaInterna)}) > 1)
+           valorSumarLanda = Landa{(sumatoriaInterna)}(sumatoriaL,sumatoriaL);
+        else
+           valorSumarLanda = Landa{(sumatoriaInterna)};
+        end
+
+        if (size(E{(sumatoriaInterna)}) > 1)
+           valorSumarE = E{(sumatoriaInterna)}(1,1);
+        else
+           valorSumarE = E{(sumatoriaInterna)};
+        end
+        sumatoria(sumatoriaL,1) = sumatoria(sumatoriaL,1) + (Alfa{(sumatoriaInterna)} * valorSumarLanda * valorSumarE);
+    end
+end
